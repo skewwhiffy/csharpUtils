@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CsharpUtils\CsharpUtils.csproj">
-      <Project>{0255FF5F-AD5D-48AB-AA23-03E8883E6C7F}</Project>
+      <Project>{A205E458-F988-4997-AE62-0A6F2CA653DD}</Project>
       <Name>CsharpUtils</Name>
     </ProjectReference>
   </ItemGroup>
