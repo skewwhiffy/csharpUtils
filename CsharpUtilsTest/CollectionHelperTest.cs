@@ -8,6 +8,8 @@ namespace CsharpUtilsTest
   [TestClass]
   public class CollectionHelperTest
   {
+    #region ToSingletonList
+
     [TestMethod]
     public void ToSingletonListWorks()
     {
@@ -24,5 +26,32 @@ namespace CsharpUtilsTest
       Assert.AreEqual(1, toTest.Count);
       Assert.IsNull(toTest[0]);
     }
+
+    #endregion
+
+    #region IsOneOf
+
+    [TestMethod]
+    public void IsOneOfWorksWithEmptyList()
+    {
+      const String testString = "testString";
+      Assert.IsFalse(testString.IsOneOf());
+    }
+
+    [TestMethod]
+    public void IsOneOfWorksWhenIsOneOf()
+    {
+      const String testString = "testString";
+      Assert.IsTrue(testString.IsOneOf("hello", testString, "goodbye"));
+    }
+
+    [TestMethod]
+    public void IsOneOfWorksWhenIsNotOneOf()
+    {
+      const String testString = "testString";
+      Assert.IsFalse(testString.IsOneOf("hello", "goodbye"));
+    }
+
+    #endregion
   }
 }
