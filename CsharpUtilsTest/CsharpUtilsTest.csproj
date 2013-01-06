@@ -51,7 +51,10 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CollectionHelperTest.cs" />
+    <Compile Include="EnumHelperTest.cs" />
+    <Compile Include="MathHelperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomHelperTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CsharpUtils\CsharpUtils.csproj">
