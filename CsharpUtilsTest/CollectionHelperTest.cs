@@ -95,5 +95,27 @@ namespace CsharpUtilsTest
     }
 
     #endregion
+
+    #region IsNullOrEmpty
+
+    [TestMethod]
+    public void IsNullOrEmptyWorksForNull()
+    {
+      Assert.IsTrue((null as List<string>).IsNullOrEmpty());
+    }
+
+    [TestMethod]
+    public void IsNullOrEmptyWorksForEmpty()
+    {
+      Assert.IsTrue(new List<string>().IsNullOrEmpty());
+    }
+
+    [TestMethod]
+    public void IsNullOrEmptyWorksForFullList()
+    {
+      Assert.IsFalse(new List<string>{"hello", "goodbye"}.IsNullOrEmpty());
+    }
+
+    #endregion
   }
 }
